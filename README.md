@@ -7,6 +7,7 @@ with a Thrift RPC interface for instrumentation.
 
 Building
 ========
+
 **CentOS 7.4**
 
 ```sh
@@ -15,15 +16,12 @@ thrift -r --gen cpp --gen py server.thriftz
 cmake CMakeLists.txt
 make
 ```
-**Ubuntu 16.04**
+
+**Arch**
 
 ```sh
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:scylladb/ppa
-sudo apt-get update
-sudo apt-get install g++ cmake fuse libfuse-dev python-thrift thrift-compiler scylla-libthrift010-dev libboost-dev
 thrift -r --gen cpp --gen py server.thrift
-cmake -DCMAKE_PREFIX_PATH=/opt/scylladb CMakeLists.txt
+cmake CMakeLists.txt
 make
 ```
 
